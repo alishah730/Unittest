@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.sample.unitTest.Unittest;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author alishah
+ *
+ */
+@RestController
+@RequestMapping("unittest")
+public class UnitController {
+	
+	@RequestMapping("/ping")
+	public ResponseEntity<?> pingResponse(){
+	
+		System.out.println("API Called");
+		return new ResponseEntity<>("API Called",HttpStatus.OK);
+		
+	}
+
+}
